@@ -1,5 +1,4 @@
-## Welcome to GitHub Pages
-
+## Welcome to ProjectEvent
 # TODO's
 - Test Driven Developement ansprechen
 - Review Prozess organisieren
