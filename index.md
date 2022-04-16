@@ -1,37 +1,50 @@
 ## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/Dominat12/ProjectEvent/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# TODO's
+- Test Driven Developement ansprechen
+- Review Prozess organisieren
+- Entwicklungsumgebung aufbauen
+- Smoke Test Umgebung ( Deploy auf echtem Gerät)
+- AWS Account
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+# TechStack
+Smartphone Apps -> React Native
+Web App (Browser) -> Vue.js
+Client - Server API -> REST API (Http)
+Backend/ Server -> Spring Boot
+Database -> MariaDB
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Container -> AWS
 
-```markdown
-Syntax highlighted code block
+## REST API
+HTTP GET -> Query/ Reiner Lesezugriff
+HTTP POST -> Erstellen von neuen Entitäten
+HTTTP DELETE -> Löschen von Entitäten
+HTTP PUT -> Updaten/Abändern von Entitäten
 
-# Header 1
-## Header 2
-### Header 3
+# TaskManagement
+Trello: https://trello.com/b/yi3Fa8FA/projectevents
+Weekly: Sonntag
 
-- Bulleted
-- List
+#Ablauf
+## Phase 1
+- MVP
 
-1. Numbered
-2. List
+## Phase 2 
+- AWS
+- AppStore/PlayStore
+- Ipohe/Ipad
 
-**Bold** and _Italic_ and `Code` text
+## Phase 3
+- Kunden Tests
+- Jenkins für Deploye und Auslieferung der Apps
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+## MVP
+Event erstellen
+Event tielen
+Event teilnehmen
+Event bearbeiten
+Event bewerten
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Dominat12/ProjectEvent/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
