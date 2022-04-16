@@ -27,7 +27,7 @@ HTTP PUT -> Updaten/Abändern von Entitäten
 Trello: https://trello.com/b/yi3Fa8FA/projectevents
 Weekly: Sonntag
 
-#Ablauf
+# Ablauf
 ## Phase 1
 - MVP
 
