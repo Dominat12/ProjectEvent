@@ -3,7 +3,6 @@ package com.example.eventpoc;
 
 import com.example.eventpoc.user.AppUser;
 import com.example.eventpoc.user.UserService;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
