@@ -1,6 +1,6 @@
-package com.example.eventpoc;
+package com.example.eventpoc.common;
 
-
+@FunctionalInterface
 public interface IsEqual<T> {
     /**
      * Compares two objects of the same class

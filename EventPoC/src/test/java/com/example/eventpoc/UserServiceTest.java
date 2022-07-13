@@ -200,14 +200,14 @@ public class UserServiceTest {
         userService.create(List.of(defaultUser1, defaultUser2, defaultUser3));
 
         /* Gefundene Users müssen alle bei create übergebene User sein */
-        List<AppUser> foundUsers = userService.getAllUsers();
+        List<AppUser> foundUsers = userService.getAll();
         assertTrue(foundUsers.stream().anyMatch(u -> u.getId() == defaultUser1.getId()));
         assertTrue(foundUsers.stream().anyMatch(u -> u.getId() == defaultUser2.getId()));
         assertTrue(foundUsers.stream().anyMatch(u -> u.getId() == defaultUser3.getId()));
 
         /* Gefundene Users müssen IMMERNOCH alle bei create übergebene User sein */
         AppUser defaultUser4 = new AppUser();
-        foundUsers = userService.getAllUsers();
+        foundUsers = userService.getAll();
         assertTrue(foundUsers.stream().anyMatch(u -> u.getId() == defaultUser1.getId()));
         assertTrue(foundUsers.stream().anyMatch(u -> u.getId() == defaultUser2.getId()));
         assertTrue(foundUsers.stream().anyMatch(u -> u.getId() == defaultUser3.getId()));
@@ -217,12 +217,12 @@ public class UserServiceTest {
 
         /* Neu ersteller User ist nun unter allen Usern*/
         userService.create(defaultUser4);
-        foundUsers = userService.getAllUsers();
+        foundUsers = userService.getAll();
         assertTrue(foundUsers.stream().anyMatch(u -> u.getId() == defaultUser4.getId()));
 
         /* Gelöschter User ist nicht mehr unter allen Usern */
         userService.delete(defaultUser4);
-        foundUsers = userService.getAllUsers();
+        foundUsers = userService.getAll();
         assertTrue(foundUsers.stream().noneMatch(u -> u.getId() == defaultUser4.getId()));
     }
 
@@ -354,7 +354,7 @@ public class UserServiceTest {
         userService.delete(List.of(defaultUser1, defaultUser2));
         var foundSpecificUsers = userService.getUserById(List.of(defaultUser1.getId(), defaultUser2.getId()));
         assertEquals(0, foundSpecificUsers.size());
-        var foundUsers = userService.getAllUsers();
+        var foundUsers = userService.getAll();
         assertEquals(1, foundUsers.size());
         assertEquals(defaultUser3, foundUsers.get(0));
     }

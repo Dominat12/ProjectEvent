@@ -1,6 +1,6 @@
 package com.example.eventpoc.user;
 
-import com.example.eventpoc.IsEqual;
+import com.example.eventpoc.common.IsEqual;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
