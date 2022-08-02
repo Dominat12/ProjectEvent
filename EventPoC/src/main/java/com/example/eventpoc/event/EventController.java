@@ -1,15 +1,14 @@
 package com.example.eventpoc.event;
 
 
+import com.example.eventpoc.user.AppUser;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController("event")
+@RestController
+@RequestMapping("/event")
 public class EventController {
 
     private final EventService eventService;
@@ -29,8 +28,16 @@ public class EventController {
         return eventService.getAll();
     }
 
+    @PostMapping("/event")
+    public AppEvent participate(@RequestBody AppEvent event){
+        return eventService.create(event);
+    }
 
 
+    @PutMapping("/participate/{eventId}/{userId}")
+    public AppEvent participate(@PathVariable("eventId") Long eventId, @PathVariable("userId") Long userId){
+        return eventService.participate(eventId, userId);
+    }
 
      /* ***************
      Test Endpoints

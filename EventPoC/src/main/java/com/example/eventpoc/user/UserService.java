@@ -80,9 +80,10 @@ public class UserService {
         /* Nur Nutzer ohne Id werden "neu" erstellt */
         users.forEach(u -> {
             if (u.getId() != 0) {
-                throw new SpecificException("Keine Id bei einer User-Erstellung!");
+                savedUsers.remove(u);
+                throw new SpecificException("Id bei der Erstellung gefunden. Ids werden automatisch bei Erstellung initialisiert!");
             }
-            savedUsers.remove(u);
+
         });
 
         return userRepository.saveAll(savedUsers);

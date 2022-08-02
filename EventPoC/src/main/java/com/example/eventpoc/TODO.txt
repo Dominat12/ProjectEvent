@@ -1,0 +1,7 @@
+- Teilnehmen
+- Absagen
+- Creator soll bei Event erstellung übergeben werden bzw. schon im Event mit drin sein!
+- Validation, dass Creator nicht null ist
+- TODO in Validation, dass Creator später der verbundene User sein soll
+- bewerten
+- Rest Controller Tests?
